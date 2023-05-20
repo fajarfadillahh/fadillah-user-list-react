@@ -1,0 +1,7 @@
+/* import css */
+@import url("./_classes.css");
+
+/* tailwind directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
