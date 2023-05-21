@@ -14,7 +14,7 @@
 
   /* button class */
   .button {
-    @apply flex h-[48px] items-center justify-center rounded-lg bg-green-600 px-6 font-bold text-white;
+    @apply flex h-[46px] items-center justify-center rounded-lg bg-gradient-to-tr from-purple-600 to-pink-400 px-6 font-bold text-white;
   }
 
   /* main class */

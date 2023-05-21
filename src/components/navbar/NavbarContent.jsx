@@ -13,7 +13,7 @@ const NavbarContent = () => {
   return (
     <div className="container flex h-24 items-center justify-between">
       <Link to="/" className="inline-flex items-center gap-[6px]">
-        <div className="h-8 w-8 rounded-full bg-gradient-to-tr from-green-600 to-green-400" />
+        <div className="h-8 w-8 rounded-full bg-gradient-to-tr from-purple-600 to-pink-400" />
         <span className="text-[20px] font-extrabold text-gray-900">
           Fadillah.
         </span>
@@ -34,7 +34,7 @@ const NavbarContent = () => {
               <li key={index}>
                 <Link
                   to={path}
-                  className="font-semibold text-gray-900 hover:text-green-600"
+                  className="font-semibold text-gray-900 hover:text-purple-600"
                 >
                   {name}
                 </Link>
@@ -49,7 +49,7 @@ const NavbarContent = () => {
       </div>
 
       <button
-        className="cursor-pointer rounded-md p-0.5 text-[1.3rem] text-gray-900 hover:bg-green-50 focus:bg-green-200 focus:ring-[3px] focus:ring-green-600/80 focus:ring-offset-[3px] md:hidden"
+        className="cursor-pointer rounded-md p-0.5 text-[1.3rem] text-gray-900 hover:bg-purple-50 focus:bg-purple-200 focus:ring-[3px] focus:ring-purple-600 focus:ring-offset-[3px] md:hidden"
         onClick={handleIsOpen}
       >
         <HiOutlineMenu />
