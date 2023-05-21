@@ -20,11 +20,9 @@ const User = () => {
       });
   }, []);
 
-  console.log({ data: users });
-
   return (
     <Layout>
-      <UserList />
+      <UserList dataUsers={users} />
     </Layout>
   );
 };
