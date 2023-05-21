@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { HiOutlineMenu } from "react-icons/hi";
 
 const NavbarContent = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
 
   const handleIsOpen = (e) => {
     e.preventDefault();
@@ -34,7 +35,9 @@ const NavbarContent = () => {
               <li key={index}>
                 <Link
                   to={path}
-                  className="font-semibold text-gray-900 hover:text-purple-600"
+                  className={`font-semibold text-gray-900 hover:text-purple-600 ${
+                    location.pathname === path ? "text-purple-600" : null
+                  }`}
                 >
                   {name}
                 </Link>
