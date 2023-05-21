@@ -3,12 +3,14 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // import pages
 import Home from "./pages/Home";
+import About from "./pages/About";
 
 const App = () => {
   return (
     <Router>
       <Routes>
         <Route index element={<Home />} />
+        <Route path="/about" element={<About />} />
       </Routes>
     </Router>
   );
