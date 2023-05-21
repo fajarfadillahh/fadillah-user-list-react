@@ -3,10 +3,13 @@ import React from "react";
 // import components
 import Layout from "../components/layout/Layout";
 
+// import parts
+import UserList from "../parts/user/UserList";
+
 const User = () => {
   return (
     <Layout>
-      <div className="pt-40">User page</div>
+      <UserList />
     </Layout>
   );
 };
