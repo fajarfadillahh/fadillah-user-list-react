@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { HiOutlineArrowLeft } from "react-icons/hi";
 
-const Hero = () => {
+const Hero = ({ user }) => {
   return (
     <section className="pb-16 pt-32">
       <div className="container flex items-center">
@@ -18,30 +18,31 @@ const Hero = () => {
           <div className="grid gap-6">
             <div className="text-center">
               <h1 className="sectio-title text-[48px] font-extrabold">
-                Details User 1
+                Details User {user.id}
               </h1>
               <p className="text-[18px] font-bold text-gray-900">
-                Hi, username
+                Hi, {user.name}
               </p>
             </div>
 
             <ul className="flex flex-col gap-2">
-              <li className="inline-flex items-center gap-1 text-gray-900">
-                <p className="font-semibold">Name:</p>
-                <p className="font-semibold">Fajar Fadillah Agustian</p>
-              </li>
-              <li className="inline-flex items-center gap-1 text-gray-900">
-                <p className="font-semibold">Name:</p>
-                <p className="font-semibold">Fajar Fadillah Agustian</p>
-              </li>
-              <li className="inline-flex items-center gap-1 text-gray-900">
-                <p className="font-semibold">Name:</p>
-                <p className="font-semibold">Fajar Fadillah Agustian</p>
-              </li>
-              <li className="inline-flex items-center gap-1 text-gray-900">
-                <p className="font-semibold">Name:</p>
-                <p className="font-semibold">Fajar Fadillah Agustian</p>
-              </li>
+              {[
+                ["😎 Name:", `${user.name}`],
+                ["✌ Username:", `${user.username}`],
+                ["📧 Email:", `${user.email}`],
+                ["📞 Phone:", `${user.phone}`],
+                ["🌏 Website:", `${user.website}`],
+              ].map(([text, value], index) => {
+                return (
+                  <li
+                    key={index}
+                    className="inline-flex items-center gap-1 text-gray-900"
+                  >
+                    <p className="font-semibold">{text}</p>
+                    <p className="font-semibold">{value}</p>
+                  </li>
+                );
+              })}
             </ul>
           </div>
         </div>
